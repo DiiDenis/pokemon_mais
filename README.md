@@ -16,10 +16,12 @@ O que foi utilizado neste projeto:
 - [x] Login básico de usuário Github
 - [x] Logout 
 - [x] Selecionar cátegorias de Pokémon
-- [x] Selecionar Pokémon)
+- [x] Selecionar Pokémon
 - [x] Página com detalhes do Pokémon selecionado
 
-**Obs.** Cada categoria exibe apenas 20 pokémons de forma proposital.
+**Obs.** 
+  - Cada categoria exibe apenas 20 pokémons de forma proposital.
+  - Não é responsivo, navegue por um desktop para melhor experiencia visual.
 
 ## Dados para acesso
 
