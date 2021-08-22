@@ -3,6 +3,7 @@
     
 
 	<div class="container">
+		<a @click="voltar">voltar</a>
 		<h2>Olá, sou o pokemon <span class="nome">{{this.nome}}</span></h2>
 
 		<div class="row dados-pokemon">
@@ -28,8 +29,8 @@
 				<ul v-if="details">
 					<li :key="index" v-for="(item, index) in details.stats">
 						<div>{{stats(item.stat.name)}}: <b>{{item.base_stat}}</b></div>
-						<b-progress :max="200">
-						<b-progress-bar :value="item.base_stat" show-progress animated :label="`...`"></b-progress-bar>
+						<b-progress :max="200" v-if="item.base_stat">
+							<b-progress-bar :value="item.base_stat" show-progress :label="`${item.base_stat * 100/200}%`"></b-progress-bar>
 						</b-progress>
 					</li>
 				</ul>
@@ -41,7 +42,6 @@
 						<img :src="details.sprites.other.dream_world.front_default" alt="">
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</div>
@@ -126,8 +126,16 @@ export default {
 			if(item.includes('speed')) item = 'Velocidade'
 			return item
 		},
-		detalhes(){
-			console.log('detalhes')
+		voltar(){
+			let id = localStorage.getItem('pokemon-categoria-id')
+			this.$nuxt.$router.push(
+				{
+					path: '/categoria',
+					query: {
+						type: id
+					}
+				}
+			);
 		}		
 	}
 }
@@ -140,6 +148,15 @@ export default {
 		margin-bottom: 20px;
 		.nome{
 			color: orange;
+		}
+	}
+	a{
+		text-decoration: underline;
+		color: #353535;
+		&:hover{
+			color:#00f;
+			text-decoration: underline;
+				cursor: pointer;
 		}
 	}
 	
