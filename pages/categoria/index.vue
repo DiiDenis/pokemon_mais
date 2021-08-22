@@ -3,6 +3,7 @@
     
 
 	<div class="container">
+		 <NuxtLink to="/">voltar</NuxtLink>
 		<h2>Selecione um Pokemon</h2>
 		<div class="row">
 			<div class="col-4 col-xs-1 mb15" :key="index" v-for="(item, index) in list">
@@ -31,7 +32,7 @@ export default {
 			user: null,
 			avatar: null,
 			list: null,
-            endpoint: null
+            id: null
 		}
 
     },
@@ -40,8 +41,8 @@ export default {
 		
         const route = this.$nuxt.$route;
         const routeQuery = route.query;
-        this.endpoint = routeQuery.type
-       
+        this.id = routeQuery.type
+        localStorage.setItem('pokemon-categoria-id',  this.id)
 
 
         if(!user){
@@ -54,7 +55,7 @@ export default {
     },
 	methods:{
 		async listCategory(){
-			const teste = await this.$axios.$get(`https://pokeapi.co/api/v2/type/${this.endpoint}/`)	
+			const teste = await this.$axios.$get(`https://pokeapi.co/api/v2/type/${this.id}/`)	
 			
 			this.list = teste.pokemon.slice(0, 20);			
 		},
@@ -77,6 +78,15 @@ export default {
 	h2{
 		text-align: center;
 		margin-bottom: 20px;
+	}
+	a{
+		text-decoration: underline;
+		color: #353535;
+		&:hover{
+			color:#00f;
+			text-decoration: underline;
+				cursor: pointer;
+		}
 	}
 	.mb15{
 		margin-bottom: 15px;
