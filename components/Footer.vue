@@ -3,13 +3,6 @@
        <span>Desenvolvido por <a href="https://github.com/DiiDenis">@diidenis</a></span>
     </div>
 </template>
-<script>
-export default {
-   props:{
-      
-   }
-}
-</script>
 <style lang="scss">
     .footer{
         background: #00f;
