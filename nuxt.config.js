@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'pokemon_mais',
+    title: 'pokémon_mais',
     htmlAttrs: {
       lang: 'en'
     },
