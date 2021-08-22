@@ -8,8 +8,7 @@ O que foi utilizado neste projeto:
 
 - **Componentização:** Para tal, criei um componente app-frame no qual se encontra o header e footer (que também são componentes), entre eles tem o slot para o conteudo de qualquer página acessada, também foi criado outros componentes como card de categorias e card de pokémons.
 
-- **Requisições API:** 
-  Utilizado API pública de pokemons (https://pokeapi.co/)
+- **Requisições API:** Utilizado API pública de pokemons (https://pokeapi.co/)
 
 
 ### Features
