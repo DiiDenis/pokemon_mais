@@ -35,10 +35,7 @@ O que foi utilizado neste projeto:
 $ npm install
 
 # Aplicação: serve with hot reload at localhost:3000
-$ npm start
-
-# StorieBook: serve with hot reload at localhost:6006
-$ npm run storybook
+$ npm run dev
 ```
 
 
