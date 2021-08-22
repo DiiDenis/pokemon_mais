@@ -38,5 +38,4 @@ $ npm install
 $ npm run dev
 ```
 
-
 Data conclusão 22/08/2021 - Denis Izaias Pereira
