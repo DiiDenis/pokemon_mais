@@ -55,9 +55,9 @@ export default {
     },
 	methods:{
 		async listCategory(){
-			const teste = await this.$axios.$get(`https://pokeapi.co/api/v2/type/${this.id}/`)	
+			const lista = await this.$axios.$get(`https://pokeapi.co/api/v2/type/${this.id}/`)	
 			
-			this.list = teste.pokemon.slice(0, 20);			
+			this.list = lista.pokemon.slice(0, 20);			
 		},
 		detalhes(item){
 			this.$nuxt.$router.push(
